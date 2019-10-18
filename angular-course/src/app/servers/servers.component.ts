@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   addServers = false;
+  addedSmthYet = "Nope, not yet!"
 
   constructor() {
     setTimeout(() => {
@@ -20,5 +21,9 @@ export class ServersComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  changeStuff() {
+    this.addedSmthYet = "Yup, we just did!"
   }
 }

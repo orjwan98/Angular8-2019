@@ -1,5 +1,6 @@
-<button class="btn-primary" [disabled]="!addServers">Add Server</button>
+<button class="btn-primary" [disabled]="!addServers" (click)="changeStuff()">Add Server</button>
 <p [innerHtml]="addServersStatus()"></p>
+<p>{{addedSmthYet}}</p>
 <div class="app-server"></div>
 <div class="app-server"></div>
 <div class="app-server"></div>
