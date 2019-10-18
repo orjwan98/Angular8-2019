@@ -15,6 +15,10 @@ export class ServersComponent implements OnInit {
     }, 1000);
   }
 
+  addServersStatus() {
+    return this.addServers;
+  }
+
   ngOnInit() {
   }
 }
