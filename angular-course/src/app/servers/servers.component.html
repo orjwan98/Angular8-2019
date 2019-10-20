@@ -4,7 +4,10 @@
 <p>{{createServerName}}</p>
 <p [innerHtml]="addServersStatus()"></p>
 <!-- <p>{{addedServerYet}}</p> -->
-<p *ngIf="createdServer">{{addedServerYet}}</p>
+<p *ngIf="createdServer; else noServer">{{addedServerYet}}</p>
+<ng-template #noServer>
+  <p>No server was created yet!</p>
+</ng-template>
 <div class="app-server"></div>
 <div class="app-server"></div>
 <div class="app-server"></div>
