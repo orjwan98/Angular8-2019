@@ -26,7 +26,7 @@ export class ServersComponent implements OnInit {
   }
 
   onAddServer() {
-    this.addedServerYet = 'Yup, we just did!';
+    this.addedServerYet = 'Yup, we just did! and it is called ' + this.createServerName;
   }
 
   createServer(event: Event) {
