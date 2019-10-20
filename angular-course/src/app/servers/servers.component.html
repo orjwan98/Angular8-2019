@@ -1,6 +1,8 @@
-<button class="btn-primary" [disabled]="!addServers" (click)="changeStuff()">Add Server</button>
+<button class="btn-primary" [disabled]="!addServers" (click)="onAddServer()">Add Server</button>
+<input type="text" placeholder="enter your new server here" class="formControl" (input)="createServer($event)" />
+<p>{{createServerName}}</p>
 <p [innerHtml]="addServersStatus()"></p>
-<p>{{addedSmthYet}}</p>
+<p>{{addedServerYet}}</p>
 <div class="app-server"></div>
 <div class="app-server"></div>
 <div class="app-server"></div>

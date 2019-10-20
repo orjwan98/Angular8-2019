@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChildActivationStart } from '@angular/router';
 
 @Component({
   selector: '[app-servers]',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   addServers = false;
-  addedSmthYet = "Nope, not yet!"
+  addedServerYet = 'Nope, not yet!';
+  createServerName = '';
 
   constructor() {
     setTimeout(() => {
@@ -16,14 +18,18 @@ export class ServersComponent implements OnInit {
     }, 1000);
   }
 
+  ngOnInit() {
+  }
+
   addServersStatus() {
     return this.addServers;
   }
 
-  ngOnInit() {
+  onAddServer() {
+    this.addedServerYet = 'Yup, we just did!';
   }
 
-  changeStuff() {
-    this.addedSmthYet = "Yup, we just did!"
+  createServer(event: Event) {
+    this.createServerName = (event.target as HTMLInputElement).value;
   }
 }
