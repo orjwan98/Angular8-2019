@@ -8,13 +8,14 @@ import { ChildActivationStart } from '@angular/router';
 })
 export class ServersComponent implements OnInit {
 
-  addServers = false;
+  addServersEnabled = false;
   addedServerYet = 'Nope, not yet!';
   createServerName = '';
+  createdServer = false;
 
   constructor() {
     setTimeout(() => {
-      this.addServers = true;
+      this.addServersEnabled = true;
     }, 1000);
   }
 
@@ -22,10 +23,11 @@ export class ServersComponent implements OnInit {
   }
 
   addServersStatus() {
-    return this.addServers;
+    return this.addServersEnabled;
   }
 
   onAddServer() {
+    this.createdServer = true;
     this.addedServerYet = 'Yup, we just did! and it is called ' + this.createServerName;
   }
 
