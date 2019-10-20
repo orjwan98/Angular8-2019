@@ -1,5 +1,6 @@
 <button class="btn-primary" [disabled]="!addServers" (click)="onAddServer()">Add Server</button>
-<input type="text" placeholder="enter your new server here" class="formControl" (input)="createServer($event)" />
+<!-- <input type="text" placeholder="enter your new server here" class="formControl" (input)="createServer($event)" /> -->
+<input type="text" placeholder="enter your new server here" class="formControl" [(ngModel)]="createServerName" />
 <p>{{createServerName}}</p>
 <p [innerHtml]="addServersStatus()"></p>
 <p>{{addedServerYet}}</p>
